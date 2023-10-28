@@ -1,0 +1,22 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    margin: 0 auto;
+}
+
+header img{
+    width: 80px; height: 80px;
+}
+header h1{
+    vertical-align: auto;
+    font-size: 50px;
+}
+header h2{
+    color: white;
+    background: linear-gradient(#3672a4, #5987adfb,#3672a4);
+    padding: 10px 0px;
+    font-size: 30px;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DojoWeather</title>
+    <link rel="stylesheet" href="DojoWeather.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>DojoWeather</h1>
+            <nav class="header-list">
+                <ul>
+                    <li class="cruser" onclick="alert('Loading Weather report...')">Jerusalem</li>
+                    <li class="cruser" onclick="alert('Loading Weather report...')">Chicago</li>
+                    <li class="cruser" onclick="alert('Loading Weather report...')">Dallas</li>
+                </ul>
+            </nav>
+        </div>
+        <div class="bottom-box">
+            <div class="nav-bar">
+                <h2>Ramallah</h2>
+                <p class="choose-meter">show temperature in <select onchange="change_temp_meter()" name="change-temp-select" id="change-temp-select">
+                    <option class="deg-sympol">&deg;C</option>
+                    <option class="deg-sympol">&deg;F</option>
+                    </select></p>
+            </div>
+            <div class="content">
+                <div class="general-box-weather">
+                    <h2>Today</h2>
+                    <img src="images\some_rain.png" alt="some_rain" class="weather-img">
+                    <p>some rain</p>
+                    <div class="digrees">
+                        <p class="in_day_degree deg-convert">24</p>
+                        <p class="in-night-degree deg-convert">18</p>
+                    </div>
+                </div>
+                <div class="general-box-weather">
+                    <h2>Tomorrow</h2>
+                    <img src="images\some_sun.png" alt="some_rain" class="weather-img">
+                    <p>some sun</p>
+                    <div class="digrees">
+                            <p class="in_day_degree deg-convert">27</p>
+                            <p class="in-night-degree deg-convert">19</p>
+                    </div>
+                </div>
+                <div class="general-box-weather">
+                    <h2>Friday</h2>
+                    <img src="images\some_clouds.png" alt="some_rain" class="weather-img">
+                    <p>some clouds</p>
+                    <div class="digrees">
+                        <p class="in_day_degree deg-convert">21</p>
+                        <p class="in-night-degree deg-convert">16</p>
+                    </div>
+                </div>
+                <div class="general-box-weather">
+                    <h2>saturday</h2>
+                    <img src="images\some_sun.png" alt="some_rain" class="weather-img">
+                    <p>some sun</p>
+                    <div class="digrees">
+                        <p class="in_day_degree deg-convert">26</p>
+                        <p class="in-night-degree deg-convert">21</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cookie-box">
+            <img src="images\cookie.png" alt="cookie" class="cookie-element">
+            <div class="cookie-conntent ,cookie-element">
+                <h1>Stop! Cookie Time</h1>
+                <p class="cookie-element">we use cookie (pal pla pla pla) to personalize Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui explicabo, excepturi minima, ratione 
+                    consequuntur laboriosam hic facilis dignissimos molestias deleniti ut tempore non error, ipsa vel obcaecati nulla maxime quia. content and to 
+                    analyse to accept it all. <a href="#">Read more...</a></p>
+            </div>
+            <button onclick="remove_cookie()" class="cookie-element accept-button cruser">I Accept</button>
+        </div>
+    </div>
+    <script src="DojoWeather.js"></script>
+</body>
+</html>
+
+
+<!-- &deg; -->

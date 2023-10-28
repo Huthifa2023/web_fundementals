@@ -1,0 +1,40 @@
+* {
+    background-color: white;
+    
+}
+button {
+    display: block;
+    margin-top: 15px;
+    margin-left: 30px;
+    
+}
+
+#search{
+    width: 100px; height: 30px;
+    font-weight: 800;
+    color: #6ec0c1;
+    border-color: #6ec0c1;
+    border-radius: 10% / 50%;
+    background-color: #f5f5f5;
+    
+}
+
+#plus {
+    background-color: #6ec0c1;
+    color: white;
+    border-radius: 50%;
+    border: 0cm;
+    height: 30px; width: 30px;
+    text-align: center;
+    font-size: 100%  ;
+
+}
+
+#create{
+    background-color: #2b78e4;
+    color: white;
+    padding: 5px;
+    border: 2px solid black;
+    box-shadow: 2px 2px 2px black;
+
+}

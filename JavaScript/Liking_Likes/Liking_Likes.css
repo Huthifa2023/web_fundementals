@@ -1,0 +1,52 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+#headings{
+    background-color: black;
+    color: white;
+    padding: 20px;
+    margin-left: 50px; margin-right: 50px;
+}
+#container-headings{
+    margin-top: 10px;
+    text-align: center;
+}
+
+.container{
+    margin: 0 auto;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.side-nav{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    border: 4px solid black;
+    align-items: center;
+    padding: 10px;
+    height: 190px;
+}
+
+.box{
+    border: 4px solid black;
+    padding: 20px;
+    margin: 10px;
+}
+.box-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+.like-button{
+    background-color: #ffd966;
+    border: 2px solid black;
+    padding: 5px;
+    font-size: 90%;
+    box-shadow: 2px 2px 2px black;
+    font-weight: bold;
+}

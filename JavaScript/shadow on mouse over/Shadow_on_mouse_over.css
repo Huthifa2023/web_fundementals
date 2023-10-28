@@ -1,0 +1,24 @@
+.notes-block{
+    display: flex;
+    justify-content: center;
+}
+.note-style{
+    padding: 10px;
+    margin: 10px;
+    background-color: lightyellow;
+    width: 50px; height: 50px;
+}
+
+.shadow{
+    border: 5px solid black;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px black;
+}
+
+.note-style:hover{
+    border: 5px solid black;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px black;
+    cursor: pointer;
+}
+

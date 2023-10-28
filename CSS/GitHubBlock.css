@@ -1,0 +1,43 @@
+body{
+    background-color: rgb(205, 207, 207);
+}
+
+img {
+    height: 200px;
+}
+
+.top{
+    padding: 10px;
+    margin: 10px;
+    background-color: #5ac6e2;
+    display: flex;
+    justify-content: space-between;
+}
+
+.center {
+    padding: 10px;
+    margin: 10px;
+    background-color: #d89baa;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.bottom{
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+}
+
+.text{
+    text-align: center;
+}
+
+/* .text h1 {
+    font-weight: bold;
+} */
+
+/* .text a {
+    font-style: oblique; 
+} */

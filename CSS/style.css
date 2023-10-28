@@ -1,0 +1,17 @@
+.container{
+    border: 2 px solid black;
+    background-color: bisque;
+    display: flex;
+}
+
+.body{
+    border: 2px solid black;
+    background-color: blue;
+    flex: 3;
+}
+
+.main-side-nav{
+    border: 2px solid black;
+    background-color: tomato;
+    flex: 1;
+}

@@ -1,0 +1,28 @@
+body{
+    margin-top: 100px;
+}
+
+.col-1, .col-2, .col-3 {
+    background-color:#5f9ea0 ;
+    color: white;
+    padding: 20px;
+    margin: 10px;
+    
+}
+
+.row {
+    display: flex;   
+}
+
+.col-1{
+    flex: 1;
+}
+
+.col-2 {
+    flex: 2;
+}
+
+.col-3{
+    flex: 3;
+}
+

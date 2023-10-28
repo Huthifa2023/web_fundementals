@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="Calculator.css">
+</head>
+<body>
+    
+    <div id="calculator">
+        <div id="display">0</div>
+        <div class="row">
+            <button class="all_button_boxes" onclick="press(7,this);">7</button>
+            <button class="all_button_boxes" onclick="press(8,this);">8</button>
+            <button class="all_button_boxes" onclick="press(9,this);">9</button>
+            <button class="operator all_button_boxes" onclick="setOP('/',this);">÷</button>
+        </div>
+        <div class="row">
+            <button class="all_button_boxes" onclick="press(4,this);">4</button>
+            <button class="all_button_boxes" onclick="press(5,this);">5</button>
+            <button class="all_button_boxes" onclick="press(6,this);">6</button>
+            <button class="all_button_boxes operator" onclick="setOP('*',this);">×</button>
+        </div>
+        <div class="row">
+            <button class="all_button_boxes" onclick="press(1,this);">1</button>
+            <button class="all_button_boxes" onclick="press(2,this);">2</button>
+            <button class="all_button_boxes" onclick="press(3,this);">3</button>
+            <button class="all_button_boxes operator" onclick="setOP('-',this);">−</button>
+        </div>
+        <div class="row">
+            <button class="all_button_boxes" onclick="clr(this);">C</button>
+            <button class="all_button_boxes" onclick="press(0,this);">0</button>
+            <button class="all_button_boxes" onclick="press('.',this);">.</button>
+            <button class="all_button_boxes operator" onclick="setOP('+',this);">+</button>
+        </div>
+        <div class="row">
+            <button id="equals" onclick="calculate(this)">=</div>
+    </div>
+
+    <script src="Calculator.js"></script>
+</body>
+</html>

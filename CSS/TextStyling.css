@@ -1,0 +1,32 @@
+h1{
+    background-color: black;
+    font-family: cursive;
+    
+}
+
+
+.white_text {
+    color: white;
+
+}
+
+.blue_text{
+    color: #00ffff ;
+    margin-left: -11px;
+}
+
+h2{
+    background-color: #663399;
+    text-align: center;
+    font-family: cursive;
+    color: aliceblue;
+    font-style: italic;
+}
+
+h3{
+    background-color: #9fc5f8;
+    text-align: end;
+    font-family:cursive;
+    text-decoration: underline;
+    font-weight: bold;
+}

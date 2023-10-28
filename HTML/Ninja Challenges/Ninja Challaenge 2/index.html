@@ -1,0 +1,51 @@
+<html>
+<body>
+	<div id='background'>
+        <div id='character' style='position:absolute; top:350px; left:350px; background-image: url("down1.png"); width:59px; height:86px;'></div>
+    </div>  
+        <!-- div tag used to define a section as a container in html -->
+
+    <script type="text/javascript">
+	    var leftValue = 350, topValue = 350; 
+		var dir="down";
+
+    	function update(){
+    		document.getElementById("character").style.left = leftValue+"px";
+    		document.getElementById("character").style.top = topValue+"px";
+            document.getElementById("character").style.backgroundImage = "url('"+dir+"1.png')";
+    	}
+        
+
+    	document.onkeydown = function(e){
+    		console.log(e); 
+    		if(e.keyCode == 37) { // LEFT
+                dir="left";
+                if (leftValue>=100){
+                    leftValue -= 10;
+                    }
+    		}
+    		else if (e.keyCode == 39) { // RIGHT
+                dir="right";
+                if(leftValue <=450){
+    			 leftValue += 10;
+                }    		
+    		}
+    		else if (e.keyCode == 40) { // DOWN, arrow down key code 40
+                dir="down";
+                if(topValue <=450){
+				topValue += 10;
+                }
+    		}
+    		else if (e.keyCode == 38) {
+                dir="top";
+                if(topValue>=100){
+                topValue -= 10; //up, arrow up key code 38
+                }
+            }
+    		update();
+    	}
+    </script>
+
+
+</body>
+</html>
