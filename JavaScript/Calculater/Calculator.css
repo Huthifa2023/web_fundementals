@@ -26,6 +26,9 @@
     /* border: 2px outset #6347258c; */
     cursor: pointer;
 }
+/* .all_button_boxes:hover{
+    border: 4px solid white;
+} */
 
 .operator{
     background-color: #ff8c00;
