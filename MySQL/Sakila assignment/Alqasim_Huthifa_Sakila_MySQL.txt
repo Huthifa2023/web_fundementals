@@ -1,0 +1,76 @@
+1- get all customers within city_id = 312, (custfirst name and last name, email and address)
+
+SELECT customer.first_name, customer.last_name, customer.email, address.address AS London_addreses_UK
+FROM customer
+JOIN address ON address.address_id = customer.address_id
+WHERE address.city_id = 312;
+______________________________________________________________________________________________________________________________
+
+2- get all comedy films, (film title, desc, release year, rating, special features, and genre)
+
+SELECT film.title, film.description, film.release_year, film.rating, film.special_features, category.name AS Genre
+FROM film
+JOIN film_category ON film_category.film_id = film.film_id
+JOIN category ON category.category_id = film_category.category_id
+WHERE category.name = 'Comedy';
+______________________________________________________________________________________________________________________________
+
+3- get all films joined by actor_id=5, (actor-id, actor-name, film title, desc, release year)
+
+SELECT actor.actor_id, CONCAT(actor.first_name,'  ',actor.last_name) AS full_name, film.title AS film_title, film.description AS film_description, film.release_year
+FROM film
+JOIN film_actor ON film_actor.film_id = film.film_id
+JOIN actor ON actor.actor_id = film_actor.actor_id
+WHERE actor.actor_id = 5
+GROUP BY actor.actor_id, film.title, film.description, film.release_year;
+______________________________________________________________________________________________________________________________
+
+4- get all customers in store-id = 1(within cities 1, 42,312,459) as(customer first_name,last-name, email, address)
+
+SELECT customer.first_name, customer.last_name, customer.email, address.address, customer.store_id
+FROM customer
+JOIN address ON customer.address_id = address.address_id
+WHERE address.city_id = '1' OR address.city_id = '42' OR address.city_id = '312' OR address.city_id = '459'
+HAVING customer.store_id = '1';
+______________________________________________________________________________________________________________________________
+
+5- get all films with rating = G , special feature= 'behind the scences', joined by actor-id=15, (film title, description, release year, rating, special features)
+
+SELECT film.title, film.description, film.release_year, film.rating, film.special_features
+FROM film
+JOIN film_actor ON film_actor.film_id = film.film_id	
+JOIN actor ON actor.actor_id = film_actor.actor_id
+WHERE film.rating = 'G' AND film.special_features LIKE '%behind the scenes%' AND actor.actor_id = 15;
+______________________________________________________________________________________________________________________________
+
+6- get all actors that joined film_id = 369(film_id, title, actor_id, actor_name)
+
+SELECT film.film_id, film.title, actor.actor_id, CONCAT(actor.first_name,' ',actor.last_name) AS actor_full_name
+FROM film
+JOIN film_actor ON film_actor.film_id = film.film_id
+JOIN actor ON actor.actor_id = film_actor.actor_id
+WHERE film.film_id = 369
+GROUP BY film.film_id, actor_id;
+______________________________________________________________________________________________________________________________
+
+7-get all drama films, with rental rate=2.99 , (film.title, description, release year, rating, special features, genre)
+
+SELECT film.title, film.description, film.release_year, film.rating, film.special_features, category.name AS genre
+FROM film
+JOIN film_category ON film_category.film_id = film.film_id
+JOIN category ON category.category_id = film_category.category_id
+WHERE category.name = 'Drama' AND film.rental_rate = 2.99;
+______________________________________________________________________________________________________________________________
+
+8- get all action films (joined by SANDRA KILMER) ,,, (film-title, description, release-year, rating, special features, genre, actor-first-name and last-name)
+
+SELECT film.title, film.description, film.release_year, film.rating, film.special_features , category.name AS genre, actor.first_name, actor.last_name
+FROM film
+JOIN film_category ON film_category.film_id = film.film_id
+JOIN category ON category.category_id = film_category.category_id
+JOIN film_actor ON film_actor.film_id = film.film_id
+JOIN actor ON actor.actor_id = film_actor.actor_id
+WHERE category.name = "Action" AND actor.first_name = 'SANDRA' AND actor.last_name = 'KILMER';
+
+
+
