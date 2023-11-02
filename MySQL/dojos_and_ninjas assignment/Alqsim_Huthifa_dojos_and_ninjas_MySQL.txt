@@ -1,0 +1,63 @@
+INSERT INTO dojos (name, created_at, updated_at)
+VALUES ("huthifa", NOW(), NOW());
+INSERT INTO dojos (name, created_at, updated_at)
+VALUES ("Moh", NOW(), NOW());
+INSERT INTO dojos (name, created_at, updated_at)
+VALUES ("Yah", NOW(), NOW());
+
+
+
+DELETE * FROM dojos;
+
+
+INSERT INTO dojos (name, created_at, updated_at)
+VALUES ("huthifa", NOW(), NOW());
+INSERT INTO dojos (name, created_at, updated_at)
+VALUES ("Moh", NOW(), NOW());
+INSERT INTO dojos (name, created_at, updated_at)
+VALUES ("Yah", NOW(), NOW());
+
+
+
+INSERT INTO ninjas (first_name, last_name, age, created_at, updated_at, dojo_id)
+VALUES ("huthifa","Alqasim", '18', NOW(), NOW(), 1);
+INSERT INTO ninjas (first_name, last_name, age, created_at, updated_at, dojo_id)
+VALUES ("Ali","Al", '45', NOW(), NOW(), 1);
+INSERT INTO ninjas (first_name, last_name, age, created_at, updated_at, dojo_id)
+VALUES ("Mohamada","yahia", '23', NOW(), NOW(), 1);
+
+
+
+INSERT INTO ninjas (first_name, last_name, age, created_at, updated_at, dojo_id)
+VALUES ("huthifa","Alqasim", '18', NOW(), NOW(), 2);
+INSERT INTO ninjas (first_name, last_name, age, created_at, updated_at, dojo_id)
+VALUES ("Ali","Al", '45', NOW(), NOW(), 2);
+INSERT INTO ninjas (first_name, last_name, age, created_at, updated_at, dojo_id)
+VALUES ("Mohamada","yahia", '23', NOW(), NOW(), 2);
+
+
+
+INSERT INTO ninjas (first_name, last_name, age, created_at, updated_at, dojo_id)
+VALUES ("huthifa","Alqasim", '18', NOW(), NOW(), 3);
+INSERT INTO ninjas (first_name, last_name, age, created_at, updated_at, dojo_id)
+VALUES ("Ali","Al", '45', NOW(), NOW(), 3);
+INSERT INTO ninjas (first_name, last_name, age, created_at, updated_at, dojo_id)
+VALUES ("Mohamada","yahia", '23', NOW(), NOW(), 3);
+
+
+SELECT first_name last_name FROM ninjas Where dojo_id=1;
+
+
+SELECT first_name last_name FROM ninjas Where dojo_id=3;
+
+
+
+SELECT ninjas.id, ninjas.first_name, ninjas.last_name, dojos.name
+FROM ninjas
+JOIN  dojos ON dojos.id = ninjas.dojo_id
+ORDER BY id DESC
+LIMIT 1;
+
+
+
+

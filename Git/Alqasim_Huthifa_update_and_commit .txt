@@ -1,0 +1,8 @@
+to conrol your github from local CLI, first install Github CLI tools
+
+
+gh auth login --web
+gh repo fork https://github.com/jjun14/git_demo --clone
+
+now u can change your copy on rempte repo by pushing changes to it ,
+but not the original repo from jjun14

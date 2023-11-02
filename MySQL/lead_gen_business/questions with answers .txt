@@ -1,0 +1,42 @@
+using this schema on this folder:
+___________________________________________________________________________________________
+find all clients first and last names, associated with billing amounts and charge_datetime
+
+SELECT clients.first_name, clients.last_name, billing.amount, billing.charged_datetime
+FROM clients
+JOIN billing ON clients.id = billing.clients_id;
+
+___________________________________________________________________________________________
+get the names of clients their domain names and the first name of all leads generated from those sites
+
+SELECT clients.first_name, clients.last_name, sites.domain_name, leads.first_name AS leads_first_name
+FROM clients
+JOIN sites ON sites.clients_id=clients.id
+JOIN leads ON leads.sites_id = sites.id;
+___________________________________________________________________________________________
+list all the clients and the sites each client has, even if the client hasnt landed a site yet
+
+SELECT clients.first_name, clients.last_name ,sites.domain_name
+FROM clients
+LEFT JOIN sites ON sites.clients_id = clients.id;
+___________________________________________________________________________________________
+find all the clients and their totla billing amounts 
+
+SELECT clients.first_name, clients.last_name, SUM(billing.amount)
+FROM clients
+JOIN billing ON clients.id = billing.clients_id
+GROUP BY clients.id;
+___________________________________________________________________________________________
+list all the domain names associated with each client
+
+SELECT clients.first_name, clients.last_name, GROUP_CONCAT(sites.domain_name)
+FROM sites
+JOIN clients ON clients.id = sites.clients_id
+GROUP BY clients.id;
+___________________________________________________________________________________________
+find the total number of leads for each site
+
+SELECT sites.id, sites.domain_name, COUNT(leads.first_name) AS number_leads
+FROM sites
+JOIN leads ON leads.sites_id = sites.id
+GROUP BY sites.id;

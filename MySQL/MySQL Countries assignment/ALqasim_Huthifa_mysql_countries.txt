@@ -1,0 +1,69 @@
+1- return all countries that speack Solvene, (country name, language and language% , arrange in DESC)
+
+SELECT country.name, countrylanguage.Language, countrylanguage.Percentage
+FROM country
+JOIN countrylanguage ON country.Code = countrylanguage.CountryCode
+WHERE countrylanguage.Language = 'Slovene'
+ORDER BY Percentage DESC;
+__________________________________________________________________________________________________________________________________
+
+2- total # of cities for each country, (country name, total number of cities, arrange in DESC)
+
+SELECT country.name, COUNT(city.name) AS num_cities
+FROM country
+LEFT JOIN city ON country.Code = city.CountryCode
+GROUP BY country.Name
+ORDER BY num_cities DESC;
+__________________________________________________________________________________________________________________________________
+
+3-get all the cities in Mexixo that have population > 500 000 , (arrange DESC)
+
+SELECT city.Name ,city.Population AS large_cities_mexico
+FROM city 
+WHERE city.CountryCode = 'Mex' AND city.Population > 500000
+ORDER BY city.Population DESC;
+-- this solution suppose that we already now country code for mexico, if not we have to use join
+__________________________________________________________________________________________________________________________________
+
+4-get all languges in each country, with % > 89% , (arrange DESC)
+
+SELECT country.Name, countrylanguage.Language , countrylanguage.Percentage
+FROM country
+JOIN countrylanguage ON country.Code = countrylanguage.CountryCode
+WHERE Percentage > 89 
+ORDER BY Percentage DESC;
+__________________________________________________________________________________________________________________________________
+
+5-get all countries with surface area < 501 , and population > 100,000
+
+SELECT country.Name, country.SurfaceArea, country.Population
+FROM country
+WHERE SurfaceArea < 501 AND Population > 100000;
+__________________________________________________________________________________________________________________________________
+
+6-countries with only Constitutional Monarchy with a capital > 200, life expectancy > 75
+
+SELECT country.Name, country.Capital, country.LifeExpectancy, country.GovernmentForm
+FROM country
+WHERE Capital > 200 AND LifeExpectancy > 75 AND GovernmentForm = 'Constitutional Monarchy';
+__________________________________________________________________________________________________________________________________
+
+7- all cities if argentina (within Buenos Airess district), population > 500,000 , (country name, city name, district , population)
+
+SELECT country.Name AS ountry_name, city.Name AS city_name, city.District, city.Population
+FROM country
+JOIN city ON country.Code = city.CountryCode
+WHERE country.Name = 'Argentina' AND city.District = 'Buenos Aires' AND city.Population > 500000;
+__________________________________________________________________________________________________________________________________
+
+8-git all regions , with number of countries in each, (arrange DESC)
+
+SELECT country.Region, COUNT(country.Name) AS num_countries
+FROM country
+GROUP BY country.Region
+ORDER BY num_countries DESC;
+
+
+
+
+
