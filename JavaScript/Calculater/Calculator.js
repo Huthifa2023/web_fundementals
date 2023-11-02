@@ -47,5 +47,3 @@ function calculate(element){
     }
     first_number=result; Second_number="", operator="";
 }
-
-
