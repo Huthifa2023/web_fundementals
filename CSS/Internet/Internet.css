@@ -2,21 +2,72 @@
     padding: 0;
     margin: 0;
 }
-
-header{
+.container{
     margin: 0 auto;
+    background-color: white;
+    margin: 5px 30px;
+}
+
+.logo-title{
+    color: #474747;
+    display: flex;
+    align-items: center;
+}
+.logo-title h1 span{
+    color: #2a6ba2;
 }
 
 header img{
-    width: 80px; height: 80px;
+    width: 100px; height: 100px;
+    margin: 0 10px -16px 0;
+    
 }
 header h1{
-    vertical-align: auto;
     font-size: 50px;
+    margin-bottom: -10px;
 }
 header h2{
     color: white;
     background: linear-gradient(#3672a4, #5987adfb,#3672a4);
-    padding: 10px 0px;
+    padding: 10px 20px;
     font-size: 30px;
+}
+/* end of header  */
+.middle-page{
+    background: linear-gradient(#eceff1, white);
+    display: flex;
+}
+
+/* dasdasdasdasdasd asdasdasd adas das aside aside aside asdie aide asde */
+
+aside{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* content contetn  */
+.content{
+    flex: 4;
+}
+
+.middle-page aside h4 span{
+    color: red;
+    font-weight: bold;
+}
+.middle-page aside p span{
+    color: #2a6ba2;
+    font-weight: bold;
+}
+
+.aside-ninja-block{
+    display: flex;
+    flex-direction: column;
+    background-image: url(images/ad_background.png);
+}
+
+#ninja-img{
+    width: 100px; height: 150px;
 }
