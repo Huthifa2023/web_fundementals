@@ -20,17 +20,13 @@ function change_temp_meter(){
     if(current_choice.value == '°C'){
         let fahernhiet=[];
         for(let i=0; i<all_numbers_nodes.length; i++) {
-            fahernhiet.push(all_numbers_nodes[i].innerText)
-            fahernhiet[i]=Math.round((fahernhiet[i]-32)*(5/9));
-            all_numbers_nodes[i].innerText=fahernhiet[i];
+            all_numbers_nodes[i].innerText=Math.round((all_numbers_nodes[i].innerText-32)*(5/9));
         }
     }
         else if (current_choice.value == '°F'){
             let Celsiuos=[];
             for(let i=0; i<all_numbers_nodes.length; i++) {
-            Celsiuos.push(all_numbers_nodes[i].innerText)
-            Celsiuos[i]=Math.round(Celsiuos[i]*(9/5)+32);
-            all_numbers_nodes[i].innerText=Celsiuos[i];
+                all_numbers_nodes[i].innerText=Math.round(all_numbers_nodes[i].innerText*(9/5)+32);
             }
         }
     }

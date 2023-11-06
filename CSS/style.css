@@ -15,3 +15,16 @@
     background-color: tomato;
     flex: 1;
 }
+
+table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+textarea{
+    overflow:auto;
+}
+
+*{
+    outline: 1px solid red;
+}

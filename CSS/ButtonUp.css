@@ -1,6 +1,6 @@
 * {
     background-color: white;
-    
+    outline: 1px solid red;
 }
 button {
     display: block;
@@ -36,5 +36,19 @@ button {
     padding: 5px;
     border: 2px solid black;
     box-shadow: 2px 2px 2px black;
-
 }
+
+#create:hover{
+    background-color: aqua;
+}
+
+p {
+    display: inline-block;
+    width: 200px;
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: lightgreen;
+    margin: 10px;
+    vertical-align: top;
+}
+  

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huthifa Alqasim</title>
+    <!-- final exam Stack1 _ WebFundementals _ ALqasim Huthifa -->
+    <link rel="stylesheet" href="Exam.css">
+</head>
+<body>
+    <!-- this is the main box holding the whole webpage -->
+    <div class="container">
+
+        <!-- header of the webpage -->
+        <header>
+            <div class="flex">
+                <img id="logo_leaf" src="images/assets/leaf.png" alt="leaf logo">
+                <h1>EasyBay</h1>
+            </div>
+            <div class="search_div">
+                <input id="search-box" type="text" placeholder="Search for anything">
+                <img class="icons" src="images/assets/search-dark.png" alt="Search icon">
+            </div>
+            <div class="flex">
+                <a href="#">Sign In</a>
+                <img onclick="alert('Your Cart is empty!')" id="cart_icon" src="images/assets/cart-dark.png" alt="cart icon">
+            </div>
+        </header>
+
+            <!-- main navigation at the top -->
+        <nav>
+            <ul>
+                <li><a href="#">Aeonium</a></li>
+                <li><a href="#">Andormischus</a></li>
+                <li><a href="#">Agave</a></li>
+                <li><a href="#">Aloe</a></li>
+                <li><a href="#">Anacampseros</a></li>
+                <li><a href="#">Aristaloe</a></li>
+                <li><a href="#">More...</a></li>
+            </ul>
+        </nav>
+        
+        <h1>YOUR Sourcec for Serious Succulent Specialties</h1>
+
+        <!-- middle page content holder -->
+        <main>
+            <div class="section">
+                <div class="section_div">
+                    <p>Discover Succulent varieties one pot or rack at a time!</p>
+                    <div class="sub-section">
+                        <a href="#">Discover</a>
+                        <img src="images/assets/arrow-light.png" alt="arrow light image">
+                    </div>
+                </div>
+                <img id="section_image" onmouseout="restore_image(this)" onmouseover="change_image(this)" src="images/assets/succulents-1.jpg" alt="succulents image">
+            </div>
+            <aside>
+                <img src="images/assets/aloe-m.jpg" alt="aloe image meduim">
+                <div>
+                    <a href="#">Soothing Aloe</a>
+                    <img src="images/assets/arrow-light.png" alt="arrow light image">
+                </div>
+            </aside>
+        </main>
+
+        <!-- bottom of the page -->
+        <footer>
+            <figure>
+                <img src="images/assets/aeonium-s.jpg" alt="aeonium image">
+                <figcaption>Aeonium</figcaption>
+            </figure>
+            <figure>
+                <img src="images/assets/aloe-s.jpg" alt="aloe image">
+                <figcaption>Aloe</figcaption>
+            </figure>
+            <figure>
+                <img src="images/assets/cactus-s.jpg" alt="cactus image">
+                <figcaption>Cactus</figcaption>
+            </figure>
+            <figure>
+                <img src="images/assets/echeveria-s.jpg" alt="echeveria image">
+                <figcaption>Echeveria</figcaption>
+            </figure>
+            <figure>
+                <img src="images/assets/sedum-s.jpg" alt="sedum image">
+                <figcaption>Sedum</figcaption>
+            </figure>
+            <figure>
+                <img src="images/assets/sempervivum-s.jpg" alt="sempervivum image">
+                <figcaption>Sempervivum</figcaption>
+            </figure>
+        </footer>
+
+        <!-- cookie box at the bottom of the page position fixed -->
+        <div class="cookie_box">
+            <img src="images/assets/alert-dark.png" alt="alert icon">
+            <p>This site makes use of third-party cookies, by clicking "I accept" you agree to the terms outlined in our <a href="#">cookie poicy</a>.</p>
+            <button onclick="remove_cookie()">I Accept</button>
+        </div>
+    </div>
+
+
+    <script src="Exam.js"></script>
+</body>
+</html>
