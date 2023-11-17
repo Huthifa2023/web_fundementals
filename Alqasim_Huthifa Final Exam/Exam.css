@@ -3,7 +3,10 @@
     padding: 0;
     /* outline: 1px solid red;  */
 }
-
+body{
+    width: 1200px;
+    margin: 0 auto;
+}
 .container{
     margin: 0 auto;
     font-family: cursive;
